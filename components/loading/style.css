@@ -1,0 +1,25 @@
+.loadingComponent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.loadingSection{
+    position: relative;
+    max-height: 100px;
+    margin-top: 35%;
+    background-color: white;
+    border-radius: 12px;
+    -webkit-box-shadow: 2px 11px 23px -4px rgba(66,66,66,1);
+    -moz-box-shadow: 2px 11px 23px -4px rgba(66,66,66,1);
+    box-shadow: 2px 11px 23px -4px rgba(66,66,66,1);
+}
+
+.loadingSection img{
+    border-radius: 12px;
+}
+

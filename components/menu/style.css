@@ -1,0 +1,22 @@
+.navMenu{
+    text-decoration: none;
+    position: absolute;
+    background-color: #66CCC7;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+li {
+    padding: 15px;
+    border-left: 1px solid white;
+}
+
+li a{
+    text-decoration: none;
+}
