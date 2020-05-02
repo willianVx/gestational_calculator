@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 const LoadingComponent = ({data, param}) => { 
     useEffect(() => {
         setTimeout(() => {
-            Router.push(`/result/${param}/?data=${data}`);
+            Router.push(`/result/?param=${param}&data=${data}`);
         }, 1000);
     });
     
