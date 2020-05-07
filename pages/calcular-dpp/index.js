@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import dynamic from "next/dynamic";
 import { useState } from 'react';
 import '../style/styles.css';
@@ -23,6 +22,14 @@ return(
         <meta charSet="UTF-8"></meta>
         <meta name="description" content="Calcular DPP"></meta>
         <meta name="keywords" content="calcular DPP"></meta>
+        <meta http-equiv="Content-Language" content="pt-br"></meta>
+
+        <meta property="og:title" content="Calcular DPP"></meta>
+        <meta property="og:description" content="Data Provável de Parto através da última menstruação"></meta>
+        <meta property="og:image" content="https://www.calculargravidez.com.br/casal-feliz-sorrindo.png"></meta>
+        <meta property="og:url" content="https://www.calculargravidez.com.br/calcular-dpp"></meta>
+        <meta name="twitter:card" content="summary_large_image"></meta>
+
         {/* <!-- Google Tag Manager --> */}
         <script dangerouslySetInnerHTML={{
           __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
