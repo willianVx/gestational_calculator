@@ -23,6 +23,14 @@ return(
         <meta charSet="UTF-8"></meta>
         <meta name="description" content="Calcular semanas em meses"></meta>
         <meta name="keywords" content="calculadora de gravidez: semanas em meses"></meta>
+        <meta http-equiv="Content-Language" content="pt-br"></meta>
+
+        <meta property="og:title" content="Calcular semanas em meses"></meta>
+        <meta property="og:description" content="Transforme as semanas em meses de gestação"></meta>
+        <meta property="og:image" content="https://www.calculargravidez.com.br/sapatos-de-bb.png"></meta>
+        <meta property="og:url" content="https://www.calculargravidez.com.br/calculadora-de-gravidez"></meta>
+        <meta name="twitter:card" content="summary_large_image"></meta>
+
         {/* <!-- Google Tag Manager --> */}
         <script dangerouslySetInnerHTML={{
           __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

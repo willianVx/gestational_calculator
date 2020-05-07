@@ -6,7 +6,7 @@ const LoadingComponent = ({data, param}) => {
     useEffect(() => {
         setTimeout(() => {
             Router.push(`/result/?param=${param}&data=${data}`);
-        }, 1000);
+        }, 600);
     });
     
     return(

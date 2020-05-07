@@ -29,6 +29,7 @@ const Result = () => {
                 <meta charSet="UTF-8"></meta>
                 <meta name="description" content="Resultado da calculadora"></meta>
                 <meta name="keywords" content="calculadora calculadora"></meta>
+                <meta http-equiv="Content-Language" content="pt-br"></meta>
                 {/* <!-- Google Tag Manager --> */}
                 <script dangerouslySetInnerHTML={{
                     __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
