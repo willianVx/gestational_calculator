@@ -2,58 +2,68 @@ legend {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 5px;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 section {
-    margin: 15px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section div {
+    width: 255px;
 }
 
 label {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    color: #BBBBBB;
 }
 
-.inputContainer{
+.inputContainer {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.inputContainer section{
+.inputContainer section {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.inputContainer label{
+.inputContainer label {
     margin-top: 10px;
     margin-bottom: 7px;
 }
 
-.inputContainer input{
-    width: 60%;
-    color:white;
-    border-radius: 12px;
-    padding: 6px;
+.inputContainer input {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: none;
+    border-bottom: 2px solid #cacaca;
 }
 
 .submitForm {
     padding: 15px;
-    background-color: #142d2c;
+    margin-top: 25px;
+    background-color: #49C9C1;
     color: white;
     border: none;
     cursor: pointer;
-    transition: ease;
     font-size: 18px;
     font-weight: bold;
+    border-radius: 25px;
+    transition: 700ms;
 }
 
-.submitForm:hover{
+.submitForm:hover {
     background-color: #9fd3d1;
-    color: #142d2c;
 }
 
-.submitContainer{
+.submitContainer {
   text-align: end;
 }

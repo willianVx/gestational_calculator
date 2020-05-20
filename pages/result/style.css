@@ -1,8 +1,9 @@
-.formContainer {
+.resultContainer {
     padding: 10px;
     margin: 10px;
     max-width: 700px;
+    background-color: white;
     -webkit-box-shadow: -5px 19px 26px -20px rgba(0,0,0,0.81);
     -moz-box-shadow: -5px 19px 26px -20px rgba(0,0,0,0.81);
     box-shadow: -5px 19px 26px -20px rgba(0,0,0,0.81);
-}
+} 

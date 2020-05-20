@@ -1,10 +1,11 @@
 import css from './style.css';
 import { useState } from 'react';
 import formatDateString from '../formatDateString';
+import DateForm from '../dateShow';
 
 const actualDate = formatDateString(new Date());
 
-const Form = ({legend, secondaryColor, type, setSubmitForm}) => { 
+const Form = ({legend, type, setSubmitForm}) => { 
     
     const [ dateWeek, setDateWeek ] = useState();
 
@@ -50,23 +51,27 @@ const Form = ({legend, secondaryColor, type, setSubmitForm}) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <legend style={{backgroundColor: secondaryColor, textAlign: "center"}}>{ legend }</legend>
+            <legend style={{textAlign: "center"}}>{ legend }</legend>
             <div className={css.inputContainer}>
             
             {type === "a" && 
                 <>
                     <section>
-                        <label htmlFor="dateWeek" > Semanas de gravidez: 
-                            <input 
-                                type="number" 
-                                name="dateWeek" 
-                                onChange={handleDateWeek} 
-                                value={dateWeek} 
-                                style={{backgroundColor: secondaryColor}}
-                                required
-                        />
-                        </label>
+                        <div>
+                            <label htmlFor="dateWeek" > Semanas de gravidez: 
+                                <input 
+                                    type="number" 
+                                    name="dateWeek" 
+                                    onChange={handleDateWeek} 
+                                    value={dateWeek} 
+                                    required
+                            />
+                            </label>
+                        </div>
                     </section>
+
+                    <DateForm />
+                    
                 </>
             }
             
@@ -74,20 +79,19 @@ const Form = ({legend, secondaryColor, type, setSubmitForm}) => {
                 type === "b" &&
                 <>
                     <section>
-                        <label htmlFor="dateForBirth">Data provável de parto: </label>
-                        <input 
-                            type="date"
-                            name="dateForBirth" 
-                            onChange={handleDPPValues} style={{backgroundColor: secondaryColor}} 
-                            value={dateForBirth}
-                            required
-                        />
+                        <div> 
+                            <label htmlFor="dateForBirth">Data provável de parto: </label>
+                            <input 
+                                type="date"
+                                name="dateForBirth" 
+                                onChange={handleDPPValues}
+                                value={dateForBirth}
+                                required
+                            />
+                        </div>
                     </section>
 
-                    <section>
-                        <label htmlFor="actualDate">Data atual: </label>
-                        {actualDate}
-                    </section>
+                    <DateForm />
                 </>
             }
 
@@ -95,15 +99,20 @@ const Form = ({legend, secondaryColor, type, setSubmitForm}) => {
                 type === "c" &&
                 <>
                     <section>
-                        <label htmlFor="dateForBirth">Primeiro dia da sua última menstruação: </label>
-                        <input 
-                            type="date"
-                            name="menstruationDate" 
-                            onChange={handleMenstruationDate} style={{backgroundColor: secondaryColor}} 
-                            value={menstruationDate}
-                            required
-                        />
+                        <div>
+                            <label htmlFor="dateForBirth">Primeiro dia da sua última menstruação: </label>
+                            <input 
+                                type="date"
+                                className={css.inputBox}
+                                name="menstruationDate" 
+                                onChange={handleMenstruationDate}
+                                value={menstruationDate}
+                                required
+                            />
+                        </div>
                     </section>
+
+                    <DateForm />
 
                 </>
             }
@@ -114,7 +123,6 @@ const Form = ({legend, secondaryColor, type, setSubmitForm}) => {
                 <input 
                     type="submit" 
                     className={css.submitForm} 
-                    style={{backgroundColor: secondaryColor}} 
                     value="Ver resultado"
                 />
             </div>

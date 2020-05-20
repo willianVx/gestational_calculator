@@ -47,17 +47,18 @@ const Home = () => {
 
       <MenuIcon menuDisplay={menuDisplay} setMenuDisplay={setMenuDisplay} />
       <Menu menuDisplay={menuDisplay} setMenuDisplay={setMenuDisplay} />
-      <HeaderImage src="/barriga-gravida-fita.png" alt="Fita foto criado por freepik " />
+      {/* <HeaderImage src="/barriga-gravida-fita.png" alt="Fita foto criado por freepik " /> */}
       
       <FormContainer 
         title="Calcular semanas de gravidez" 
-        backgroundColor="#46a09d" 
+        backgroundColor="white" 
       >
         <p>
         Oi, como você está? Esse é o espaço para calcular a semana de gravidez em que você está pela DPP (Data Provável de Parto). 
         A DPP foi estimada pelo seu médico na primeira consulta de pré-natal, usando o dia em que veio sua última menstruação. 
         Se você ainda não sabe, clique aqui para <Link href="/calcular-dpp"><a>calcular DPP.</a></Link>
         </p>
+        <hr></hr>
         <Form 
           legend="Calcular a semana de gravidez" 
           secondaryColor="#204a48" 

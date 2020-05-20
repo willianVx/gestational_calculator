@@ -46,17 +46,18 @@ return(
 
       <MenuIcon menuDisplay={menuDisplay} setMenuDisplay={setMenuDisplay} />
       <Menu menuDisplay={menuDisplay} setMenuDisplay={setMenuDisplay} />
-      <HeaderImage src="/sapatos-de-bb.png" alt="Baby photo created by freepik  " />
+      {/* <HeaderImage src="/sapatos-de-bb.png" alt="Baby photo created by freepik  " /> */}
 
       <FormContainer 
         title="Calculadora de gravidez: semanas em meses" 
-        backgroundColor="#46a09d"
+        backgroundColor="white"
       >
         <p>
             Oi, como você está? A gravidez faz com que a gente fale em código: sempre usando as semanas para se referir ao desenvolvimento do bebê. 
             Aqui embaixo, você pode transformar as semanas em meses de gestação. 
             Se você tem a data provável do parto e se perdeu na contagem de semanas, clique aqui para <Link href="/"><a>calcular semanas de gravidez.</a></Link> 
         </p>
+        <hr></hr>
         <Form 
           legend="Calcular gravidez de semana para meses" 
           secondaryColor="#204a48" 

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import '../style/styles.css';
 import HeaderImage from '../../components/headerImage';
+import css from './style.css';
 import Menu from '../../components/menu';
 import MenuIcon from '../../components/menuIcon';
 import resolveDateWeekValue from '../../components/weeksForMonths';
@@ -43,9 +44,9 @@ const Result = () => {
 
             <MenuIcon menuDisplay={menuDisplay} setMenuDisplay={setMenuDisplay} />
             <Menu menuDisplay={menuDisplay} setMenuDisplay={setMenuDisplay} />
-            <HeaderImage src="/sapatos-de-bb.png" alt="Baby photo created by freepik  " />
+            {/* <HeaderImage src="/sapatos-de-bb.png" alt="Baby photo created by freepik  " /> */}
 
-            <div style={{maxWidth: "700px"}}>
+            <div className={css.resultContainer}>
                 {
                     param === "week" && 
                     

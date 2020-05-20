@@ -45,9 +45,9 @@ return(
 
       <MenuIcon menuDisplay={menuDisplay} setMenuDisplay={setMenuDisplay} />
       <Menu menuDisplay={menuDisplay} setMenuDisplay={setMenuDisplay} />
-      <HeaderImage src="/casal-feliz-sorrindo.png" alt="Pessoas foto criado por jcomp" />
+      {/* <HeaderImage src="/casal-feliz-sorrindo.png" alt="Pessoas foto criado por jcomp" /> */}
 
-      <FormContainer title="Calcular DPP" backgroundColor="#46a09d" >
+      <FormContainer title="Calcular DPP" backgroundColor="white" >
         <p>
             Oi, como você está? Se você está grávida, saiba que é possível estimar o dia em que ele vai nascer. 
             Basta inserir aqui qual foi o primeiro dia da sua última menstruação. 
@@ -57,12 +57,14 @@ return(
             Caso você esteja pretendendo engravidar, também pode calcular uma data futura, 
             colocando o dia em que estima que irá menstruar pela última vez antes do nascimento do seu filho. 
         </p>
+        <hr></hr>
         <Form 
           legend="Por data provável do parto" 
           secondaryColor="#204a48" 
           type="c"
           setSubmitForm={setSubmitForm}
         />
+        <hr></hr>
         <p>
             Ah, lembre-se de que esta é uma data estimada! Ou seja: ela calcula quando sua gravidez completará 40 semanas.
             Mas é possível que seu bebê não seja apressadinho e espere para decidir nascer até as 42 semanas.

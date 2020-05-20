@@ -1,0 +1,52 @@
+.containerDateShow {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.containerDateShow .internalContainer { 
+    width: 230px;
+    height: 100%;
+    padding: 12px;
+    -webkit-box-shadow: 0px 6px 9px -2px rgba(99,99,99,1);
+    -moz-box-shadow: 0px 6px 9px -2px rgba(99,99,99,1);
+    box-shadow: 0px 6px 9px -2px rgba(99,99,99,1);
+}
+
+.containerDateShow span {
+    display: block;
+}
+
+.containerDateShow span:first-child {
+    color: #BBBBBB;
+}
+
+.containerDateShow span:nth-child(2) {
+    color: #49C9C1;
+    font: caption;
+}
+
+.containerDateShow hr {
+    border: 1px solid #dcd9d9;
+}
+
+.dayCircleContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.dayCircle {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+    font-family: 'Montserrat', sans-serif;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    text-align: center;
+    line-height: 120px;
+    background-color: #49C9C1;
+    color: white;
+    font-size: 48px;
+    
+}
