@@ -3,7 +3,10 @@ import Link from 'next/link';
 import MenuIcon from '../menuIcon';
 
 const Menu = ({menuDisplay, setMenuDisplay}) => (
-    <nav className={css.navMenu} style={{ display: menuDisplay ? 'block' : 'none' }}>
+    <nav 
+        className={css.navMenu} 
+        style={{right: menuDisplay ? '0' : '100%'}}
+    >
         <MenuIcon menuDisplay={menuDisplay} setMenuDisplay={setMenuDisplay} />
         <ul>
             <li>

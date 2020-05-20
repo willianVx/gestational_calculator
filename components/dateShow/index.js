@@ -1,6 +1,6 @@
 import css from './style.css';
 
-const DateForm = () => {
+const DateForm = ({dateInput}) => {
 
     const weekDays = ['domingo', 'segunda', 'terça', 
                     'quarta', 'quinta', 'sexta', 'sábado'];
@@ -10,8 +10,8 @@ const DateForm = () => {
                         'agosto', 'setembro', 'outubro', 
                         'novembro', 'dezembro'];
 
-    const date = new Date();
-    console.log(date);
+    const date = dateInput ? new Date(dateInput) : new Date();
+    console.log(date, dateInput);
     const year = date.getFullYear();
     const day = date.getDate();
     const month = date.getMonth();

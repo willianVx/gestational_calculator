@@ -70,7 +70,7 @@ const Form = ({legend, type, setSubmitForm}) => {
                         </div>
                     </section>
 
-                    <DateForm />
+                    <DateForm dateInput={dateWeek} />
                     
                 </>
             }
@@ -91,7 +91,7 @@ const Form = ({legend, type, setSubmitForm}) => {
                         </div>
                     </section>
 
-                    <DateForm />
+                    <DateForm dateInput={dateForBirth} />
                 </>
             }
 
@@ -112,7 +112,7 @@ const Form = ({legend, type, setSubmitForm}) => {
                         </div>
                     </section>
 
-                    <DateForm />
+                    <DateForm dateInput={menstruationDate} />
 
                 </>
             }

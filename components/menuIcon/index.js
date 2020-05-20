@@ -6,7 +6,7 @@ const MenuIcon = ({ menuDisplay, setMenuDisplay}) => {
         setMenuDisplay(!menuDisplay);
     }
     return(
-        <div className={css.menuIcon} onClick={handleMenuClick} >
+        <div className={menuDisplay ? css.menuIconTranslate : css.menuIcon} onClick={handleMenuClick} >
             <div></div>
             <div></div>
             <div></div>

@@ -7,4 +7,32 @@
     height: 3px;
     background-color: white;
     margin: 5px 0;
+    transition: 550ms;
 }
+
+.menuIconTranslate {
+    margin: 20px 40px;
+    cursor: pointer;
+}
+
+.menuIconTranslate div {
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 550ms;
+} 
+
+.menuIconTranslate div:first-child {
+   transform: rotate(-45deg) translateY(5px);
+   width: 15px;
+   left: -6px;
+   position: relative
+}
+
+.menuIconTranslate div:nth-child(3) {
+    transform: rotate(45deg) translateY(-5px);
+    width: 15px;
+    left: -6px;
+    position: relative
+ }
