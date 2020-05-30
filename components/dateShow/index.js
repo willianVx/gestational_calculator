@@ -1,6 +1,6 @@
 import css from './style.css';
 
-const DateForm = ({dateInput}) => {
+const DateShow = ({dateInput}) => {
 
     const weekDays = ['domingo', 'segunda', 'terça', 
                     'quarta', 'quinta', 'sexta', 'sábado'];
@@ -10,8 +10,9 @@ const DateForm = ({dateInput}) => {
                         'agosto', 'setembro', 'outubro', 
                         'novembro', 'dezembro'];
 
-    const date = dateInput ? new Date(dateInput) : new Date();
-    console.log(date, dateInput);
+    const [sanitiseDateYear, sanitiseDateMonth, sanitiseDateDay] = dateInput;     
+
+    const date = dateInput ? new Date(sanitiseDateYear, sanitiseDateMonth, sanitiseDateDay) : new Date();
     const year = date.getFullYear();
     const day = date.getDate();
     const month = date.getMonth();
@@ -34,4 +35,4 @@ const DateForm = ({dateInput}) => {
     );
 }
 
-export default DateForm;
+export default DateShow;

@@ -1,9 +1,15 @@
 import css from './style.css';
 import { useState } from 'react';
 import formatDateString from '../formatDateString';
+import ErrorMessage from '../errorMessage';
 import DateForm from '../dateShow';
+import DateProc from '../DateHelper';
 
-const actualDate = formatDateString(new Date());
+const dateValue = new Date(); 
+
+const sanitiseHtmlDate = (dateString) => {
+    return dateString ? dateString.split('-') : '';
+}
 
 const Form = ({legend, type, setSubmitForm}) => { 
     
@@ -12,6 +18,10 @@ const Form = ({legend, type, setSubmitForm}) => {
     const [ dateForBirth, setDateForBirth ] = useState(); 
 
     const [ menstruationDate, setMenstruationDate ] = useState();
+
+    const [ errorMessage, setErrorMessage ] = useState('');
+
+    const [ onFormError, setOnFormError ] = useState(false);
 
     const handleDateWeek = (e) => {
         e.preventDefault();
@@ -36,12 +46,32 @@ const Form = ({legend, type, setSubmitForm}) => {
         e.preventDefault();
         if(!dateWeek && !dateForBirth && !menstruationDate) return;
         
-        if(dateWeek) {
+        if(dateWeek) {    
             setSubmitForm({redirect: true, data: dateWeek, param: "week"});
         }
 
         if(dateForBirth) {
-            setSubmitForm({redirect: true, data: dateForBirth, param: "dateForBirth"});
+            // const [ valueDateYear ] = sanitiseHtmlDate(dateForBirth);
+            console.log(dateForBirth);
+
+            const d = new DateProc(dateForBirth);
+            console.log(d);
+
+            // const maxDateForBirthValue = dateValue.setMonth(dateValue.getMonth() + 11);
+
+            // if (valueDateYear < dateValue.getFullYear()) {
+            //     setErrorMessage('A data não pode ser menor que a atual!');
+            //     setOnFormError(true);
+            //     return;
+            // }   
+
+            // if (new Date(dateForBirth).getTime() > new Date(maxDateForBirthValue).getTime()) {
+            //     setErrorMessage('A data é maior do que o periodo gestacional');
+            //     setOnFormError(true);
+            //     return;
+            // }
+
+            // setSubmitForm({redirect: true, data: dateForBirth, param: "dateForBirth"});
         }
 
         if(menstruationDate) {
@@ -90,8 +120,8 @@ const Form = ({legend, type, setSubmitForm}) => {
                             />
                         </div>
                     </section>
-
-                    <DateForm dateInput={dateForBirth} />
+                    <ErrorMessage message={errorMessage} onError={onFormError} /> 
+                    <DateForm dateInput={sanitiseHtmlDate(dateForBirth)} />
                 </>
             }
 
